@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans', system-ui, sans-serif;
+  background-color: #f5f1e8;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Government-style tricolor stripe */
+.gov-stripe {
+  background: linear-gradient(
+    to right,
+    #ff9933 0%, #ff9933 33.33%,
+    #ffffff 33.33%, #ffffff 66.66%,
+    #138808 66.66%, #138808 100%
+  );
+}
+
+/* Ashoka Chakra spinner */
+.chakra-spin {
+  animation: spin 8s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e8e0d0;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a4d8f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d2d52;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #1a4d8f;
+  outline-offset: 2px;
+}
+
+/* Shimmer effect for loading */
+.shimmer-bg {
+  background: linear-gradient(90deg, #e8e0d0 0%, #f5f1e8 50%, #e8e0d0 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+.emergency-flash {
+  animation: emergency-flash 1.2s ease-in-out infinite;
+}
+
+@keyframes emergency-flash {
+  0%, 100% { background: rgba(200, 30, 30, 0.12); }
+  50% { background: rgba(200, 30, 30, 0.28); }
+}
